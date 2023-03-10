@@ -1,0 +1,25 @@
+// Common element in the Array from 3 sorted arrays
+int arr1[] = { 1, 5, 10, 20, 40, 80 };
+        int arr2[] = { 6, 7, 20, 80, 100 };
+        int arr3[] = { 3, 4, 15, 20, 30, 70, 80, 120 };
+        int p1=0;
+        int p2=0;
+        int p3=0;
+        while(p1<arr1.length){
+           if(arr1[p1]==arr2[p2] && arr3[p3]==arr2[p2]){
+               System.out.println(arr1[p1]);
+               p1++;
+               p2++;
+               p3++;
+           }
+           else if(arr1[p1]<arr2[p2] && arr1[p1]<arr3[p3]){
+               p1++;
+           }
+           else if(arr2[p2]<arr1[p1] && arr2[p2]<arr3[p3]){
+               p2++;
+           }
+           else
+           {
+               p3++;
+           }
+       }
